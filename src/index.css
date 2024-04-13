@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -138,6 +142,26 @@ main header .menu {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: center;
+  padding: 3rem 6rem;
+
+  .core {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .user-image {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
 }
 
 @media (prefers-color-scheme: light) {
