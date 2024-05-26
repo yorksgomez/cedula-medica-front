@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #000;
+  background-color: #fff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -159,9 +159,39 @@ main header .menu {
     .user-image {
       width: 90px;
       height: 90px;
+      padding-right: 10px;
     }
   }
 
+}
+
+.login-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30%;
+  row-gap: 30px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.login-section h1 {
+  font-size: 2rem;
+  color: #63abc5;
+}
+
+.login-section button {
+  background-color: #63abc5;
+  border: 0;
+  border-radius: 5px;
+}
+
+input {
+  padding: 0.5rem 0.5rem;
+  background-color: #fff;
+  border-radius: 2px;
+  color: #000;
+  border: 1px solid #63abc5;  
 }
 
 @media (prefers-color-scheme: light) {

@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
 import Layout from "./Layout";
-import user from "./assets/user.jpg";
-import { myHistory } from "./controller/UserController";
+import userimg from "./assets/user.jpg";
+import { useParams } from "react-router-dom";
+import { history } from "./controller/UserController";
 
-function User() {
-  const [username, setUsername] = useState(localStorage.getItem("username"));
+function History() {
+  let {username, salt} = useParams();
+  const [user, setUser] = useState(localStorage.getItem("username"));
   const [diabetes, setDiabetes] = useState(false);
   const [hypertension, setHypertension] = useState(false);
   const [cardiacIssues, setCardiacIssues] = useState(false);
   const [information, setInformation] = useState(false);
 
   useEffect(() => {
-    myHistory().then(json => {
+    history(username, salt).then(json => {
+        setUser(json.username);
         setCardiacIssues(json.cardiacIssues);
         setDiabetes(json.diabetes);
         setInformation(json.information);
@@ -25,9 +28,9 @@ function User() {
     <Layout>
         <div className="user-container">
             <div className="core">
-                <img src={user} alt="" className="user-image" />
+                <img src={userimg} alt="" className="user-image" />
                 <div className="info">
-                    <h4>Nombre: {username}</h4>
+                    <h4>Nombre: {user}</h4>
                     <p>{information}</p>
                 </div>
             </div>
@@ -43,4 +46,4 @@ function User() {
   );
 }
 
-export default User;
+export default History;
