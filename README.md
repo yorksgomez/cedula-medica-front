@@ -1,11 +1,7 @@
-# React + Vite
+# Videos
+Entregable 1: https://youtu.be/Eo_BMIjM12k
+Entregable 2: https://youtu.be/Mnh0jm-9sc4
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 # CEDULA MEDICA
 Este proyecto es una aplicación web diseñada para brindar asistencia rápida en caso de accidentes de tráfico. Utilizando tecnología de escaneo de códigos QR, 
